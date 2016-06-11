@@ -27,15 +27,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         ((Button) findViewById(btKaup)).setOnClickListener(this);
         ((Button) findViewById(R.id.btCalc)).setOnClickListener(this);
         ((Button) findViewById(R.id.btLogin)).setOnClickListener(this);
         ((Button) findViewById(R.id.btSignup)).setOnClickListener(this);
     }
     @Override
-
-
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.btKaup:

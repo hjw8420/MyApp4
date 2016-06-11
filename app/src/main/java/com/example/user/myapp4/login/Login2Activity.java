@@ -20,6 +20,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -42,9 +43,9 @@ import static android.Manifest.permission.READ_CONTACTS;
 /**
  * A login screen that offers login via email/password.
  */
-public class Login2Activity extends Activity implements View.OnClickListener{
+public class Login2Activity extends Activity implements View.OnClickListener {
 
-    EditText etID,etPW;
+    EditText etID, etPW;
     TextView textResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +54,7 @@ public class Login2Activity extends Activity implements View.OnClickListener{
         etID = (EditText) findViewById(R.id.etID);
         etPW = (EditText) findViewById(R.id.etPW);
         textResult = (TextView) findViewById(R.id.textResult);
-        ((Button)findViewById(R.id.btSignup)).setOnClickListener(this);
+        ((Button) findViewById(R.id.btSignup)).setOnClickListener(this);
 
     }
 
@@ -67,8 +68,11 @@ public class Login2Activity extends Activity implements View.OnClickListener{
         member.setId(id);
         member.setPw(pw);
         member = dao.login(member);
-        textResult.setText("로그인 결과 : "+member.getName()+" 환영합니다");
-        // Set up the login form.
-
+        Log.i("DB 다녀온 결과 ID",member.getId());
+        if (member.getName()=="") {
+            textResult.setText("로그인 결과 : 실패");
+        } else {
+            textResult.setText("로그인 결과 : " + member.getName() + " 환영합니다");
+        }
     }
 }
