@@ -3,7 +3,12 @@
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     android:orientation="vertical" >
-
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="초기화"
+        android:textSize="30dp"
+        android:id="@+id/btInit"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -11,7 +16,7 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:text="이름 : "/>
         <EditText
             android:layout_width="match_parent"
@@ -26,14 +31,30 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
+            android:textSize="30dp"
             android:text="인원 : "/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/etNum"/>
     </LinearLayout>
-
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="입력"
+        android:textSize="30dp"
+        android:id="@+id/btInsert"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수정"
+            android:textSize="30dp"
+            android:id="@+id/btUpdate"/>
+     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,12 +62,33 @@
         <TextView
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="결과 : "/>
+            android:textSize="30dp"
+            android:text="ID : "/>
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/etResult"/>
+            android:id="@+id/etID"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="조회"
+            android:textSize="30dp"
+            android:id="@+id/btFind"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="삭제"
+            android:textSize="30dp"
+            android:id="@+id/btDelete"/>
     </LinearLayout>
 
     <LinearLayout
@@ -55,12 +97,7 @@
         android:orientation="horizontal"
         android:gravity="center_horizontal">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="초기화"
-            android:textSize="30dp"
-            android:id="@+id/btInit"/>
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -75,33 +112,11 @@
             android:id="@+id/btCount"/>
     </LinearLayout>
 
-    <LinearLayout
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="입력"
-            android:textSize="30dp"
-            android:id="@+id/btInsert"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="조회"
-            android:textSize="30dp"
-            android:id="@+id/btFind"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="수정"
-            android:textSize="30dp"
-            android:id="@+id/btUpdate"/>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="삭제"
-            android:textSize="30dp"
-            android:id="@+id/btDelete"/>
-    </LinearLayout>
+        android:background="#FFFF00"
+        android:layout_weight="2"
+        android:id="@+id/etResult"/>
+
 </LinearLayout>
