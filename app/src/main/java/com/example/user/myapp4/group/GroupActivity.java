@@ -1,11 +1,12 @@
 package com.example.user.myapp4.group;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import com.example.user.myapp4.R;
 
-public class GroupActivity extends AppCompatActivity {
+public class GroupActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -14,6 +14,7 @@ import android.widget.Button;
 
 import com.example.user.myapp4.R;
 import com.example.user.myapp4.calc.CalcActivity;
+import com.example.user.myapp4.group.GroupActivity;
 import com.example.user.myapp4.kaup.KaupActivity;
 import com.example.user.myapp4.login.Login2Activity;
 import com.example.user.myapp4.signup.SignupActivity;
@@ -31,6 +32,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ((Button) findViewById(R.id.btCalc)).setOnClickListener(this);
         ((Button) findViewById(R.id.btLogin)).setOnClickListener(this);
         ((Button) findViewById(R.id.btSignup)).setOnClickListener(this);
+        ((Button) findViewById(R.id.btGroup)).setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -46,6 +48,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.btSignup:
                 startActivity(new Intent(this, SignupActivity.class));
+                break;
+            case R.id.btGroup:
+                startActivity(new Intent(this, GroupActivity.class));
                 break;
 
         }
